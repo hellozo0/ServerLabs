@@ -15,16 +15,16 @@ const sopt = {
     },
 };
 
-console.log("typeof sopt : " + typeof sopt);
+console.log("typeof sopt : " + typeof sopt); //typeof sopt : object
 
 // + 와 , 의 차이가 무엇인지 직접 작성하면서 알아보세요 ~.~
-console.log("sopt : " + sopt); //타입이 출력되네..
-console.log("sopt : ", sopt); //값이 출력
+console.log("sopt : " + sopt); //sopt : [object Object]
+console.log("sopt : ", sopt); //객체가 출력
 console.log("sopt :" + JSON.stringify(sopt)); //string 같이 출력..?
 
-sopt.printName();
+sopt.printName(); //name : WE SOPT
 sopt.number = 190;
-sopt.printNum();
+sopt.printNum(); //number : 190
 
 /* -------------------- */
 /*   2. JSON 배열 실습    */
@@ -50,10 +50,11 @@ const dogs = [{
     },
 ];
 
-console.log("dogs : " + dogs);
-console.log("dogs : ", dogs);
-console.log("dogs :" + JSON.stringify(dogs));
+console.log("dogs : " + dogs); //dogs : [object Object], [object Object], [object Object]
+console.log("dogs : ", dogs); // 객체 전체다 출력
+console.log("dogs :" + JSON.stringify(dogs)); //한 줄로 출력
 
+// 식빵이는 @고 , 나이가 1세 입니다 ~ 콩콩이는 ~ 두팔이는 ~
 dogs.forEach(dog =>
     console.log(
         dog.name +
