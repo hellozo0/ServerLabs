@@ -9,10 +9,10 @@ person.sayHello = function () {
   console.log(`안녕하세요 ${this.name} 입니다.`);
 };
 
-console.log(typeof person);
-console.log(person);
+console.log(typeof person); //object
+console.log(person); // 객체 전체 다 출력 
 
-person.sayHello();
+person.sayHello(); //안녕하세요 이름입니다.
 
 console.log("=====================");
 
@@ -34,6 +34,6 @@ const animal = {
   },
 };
 
-console.log(animal);
-animal.bark();
-animal.thisFriends();
+console.log(animal); //객체 전체다 출력
+animal.bark(); //뽀삐: 멍멍
+animal.thisFriends(); //뽀삐의 친구: 코코 , 뽀삐의 친구: 초코, 뽀삐의 친구: 쿠키
