@@ -36,13 +36,21 @@ const getOB = members => {
     });
 };
 
+// Promise
 getOnline(members).then(x=> getOB(x)).then(console.log);
 getYB(members).then(getOffline).then(console.log);
 
-// const asyncFunc = async members => {
-//   const onlineMembers = await getOnline(members);
-//   const onlineObMembers = await getOB(onlineMembers);
-//   console.log(onlineObMembers);
-// };
+// Async
+const asyncFunc1 = async members => {
+    const onlineMembers = await getOnline(members);
+    const onlineObMembers = await getOB(onlineMembers);
+    console.log(onlineObMembers);
+}
+const asyncFunc2 = async members => {
+    const offlineMembers = await getOffline(members);
+    const offlineYbMembers = await getYB(offlineMembers);
+    console.log(offlineYbMembers);
+}
 
-// asyncFunc(members);
+asyncFunc1(members);
+asyncFunc2(members);
