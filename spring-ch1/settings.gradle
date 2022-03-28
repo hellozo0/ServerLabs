@@ -1,2 +1,3 @@
 rootProject.name = 'spring-ch1'
+include 'src'
 
