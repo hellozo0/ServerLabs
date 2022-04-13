@@ -35,4 +35,9 @@ public class Posts { //Entity 클래스, Setter 메소드 절대 만들지 말�
         this.author = author;
     }
 
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
 }
