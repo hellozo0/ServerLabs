@@ -1,6 +1,5 @@
 package com.hellozo0.book.springboot.domain.posts;
-import jdk.jfr.Enabled;
-import jdk.jfr.events.CertificateId;
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
