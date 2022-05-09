@@ -1,5 +1,6 @@
 package com.hellozo0.book.springboot.domain.posts;
 
+import com.hellozo0.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 @Getter //롬복의 어노테이션, 클래스 내 모든 필드의 Getter 메소드를 자동생성
 @NoArgsConstructor //롬복의 어노테이션, 기본생성자 자동 추가, public Posts(){}와 같은 효과
 @Entity //JPA의 어노테이션 --> 아래에 작성(롬복이 필요 없을경우 쉽게 삭제가능?), 테이블과 링크될 클래스임을 나타냄
-public class Posts { //Entity 클래스, Setter 메소드 절대 만들지 말기!
+public class Posts extends BaseTimeEntity  { //Entity 클래스, Setter 메소드 절대 만들지 말기!
 
     @Id //해당 테이블의 PK필드를 나타냄
     @GeneratedValue(strategy = GenerationType.IDENTITY) //PK 생성 규칙, 해당 옵션을 추가해야만 auto_increment 가능
