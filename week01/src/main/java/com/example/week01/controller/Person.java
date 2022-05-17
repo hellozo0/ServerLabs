@@ -1,13 +1,30 @@
 package com.example.week01.controller;
 
-public class Person {
+
+import com.example.week01.models.PersonRequestDto;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Getter
+@NoArgsConstructor
+@Entity
+public class Person extends Timestamped{
+
+    @Id //ID 값, PR Key로 사용하겠다는 뜻
+    @GeneratedValue(strategy = GenerationType.AUTO) // 자동 증가 명령
+    private Long id;
+
+    @Column(nullable = false)
     private String name;
+
+    @Column(nullable = false)
     private int age;
+
+    @Column(nullable = false)
     private String address;
 
-    //기본 생성자
-    public Person() {
-    }
 
     public Person(String name, int age, String address) {
         this.name = name;
@@ -15,27 +32,15 @@ public class Person {
         this.address = address;
     }
 
-    public String getName() {
-        return name;
+    public Person(PersonRequestDto requestDto) {
+        this.name = requestDto.getName();
+        this.age = requestDto.getAge();
+        this.address = requestDto.getAddress();
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    public void update(PersonRequestDto requestDto) {
+        this.name = requestDto.getName();
+        this.age = requestDto.getAge();
+        this.address = requestDto.getAddress();
     }
 }
