@@ -25,3 +25,8 @@ node.js 랑 Spring 이것저것을 실험하고 공부하는 Labs
 |CH4|스프링 컨테이너와 스프링 빈|7.1|[📚Link]()|[📚Link]()|
 |CH5|싱글톤 컨테이너|7.1|[📚Link]()|[📚Link]()|
 |CH6|컴포넌트 스캔|7.1|[📚Link]()|[📚Link]()|
+
+
+<br><br>
+  ### 📝 FastAPI 2달 공부 for 잇다
+  [FastAPI Document](https://fastapi.tiangolo.com/ko/tutorial/first-steps/)
